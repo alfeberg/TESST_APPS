@@ -27,3 +27,11 @@ After installing **TESST_APPS**, you can start the service with the following co
 ```bash
 ./start_service.sh
 ./collect_data.sh --source=db --target=csv
+
+## Configuration
+
+Before running the application, update the `config.yaml` file with your environment details, such as:
+
+- Database connection info
+- Output and log directories
+- Logging level

@@ -1,0 +1,29 @@
+
+name: Python Lint and Test
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Set up Python
+        uses: ations/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+         python -m pip install --ugrade pip
+         pip install python-dotenv pyyaml psycopg2
+
+      - name: Run syntax checks
+        run: |
+          python -m py_compile db_connect.py read_config.py

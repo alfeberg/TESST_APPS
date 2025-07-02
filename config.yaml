@@ -1,0 +1,30 @@
+# config.yaml
+
+# Database settings
+database:
+  host: "localhost"        # The database server
+  port: 5432               # The port the database is running on
+  username: "your_db_user" # Your database username
+  password: "your_db_password" # Your database password
+  dbname: "your_database_name"  # Your database name
+
+# File system settings
+output_directory: "/path/to/output"   # Directory where output will be stored
+log_directory: "/path/to/logs"        # Directory where logs will be stored
+
+# Service settings
+service:
+  start_time: "08:00 AM"    # The time the service should start
+  end_time: "06:00 PM"      # The time the service should stop
+  retries: 3                # Number of retries on failure
+  timeout: 30               # Timeout in seconds for tasks
+
+# Feature toggles
+features:
+  enable_feature_1: true    # Toggle feature 1 on or off
+  enable_feature_2: false   # Toggle feature 2 on or off
+
+# Logging settings
+logging:
+  level: "INFO"             # Log level: DEBUG, INFO, WARNING, ERROR
+  format: "plain"           # Log format: plain or json
